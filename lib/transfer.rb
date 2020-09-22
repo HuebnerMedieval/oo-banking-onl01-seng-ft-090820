@@ -27,7 +27,7 @@ class Transfer
   end
   
   def reverse_transfer
-    if @status = "complete"
+    if @status == "complete"
       @sender,@receiver = @receiver,@sender
       @status = "pending"
       self.execute_transaction
